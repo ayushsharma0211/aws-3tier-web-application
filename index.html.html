@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayush Sharma | AWS 3-Tier Architecture</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg:#070b14;--card:rgba(255,255,255,.06);--border:rgba(255,255,255,.12);
+--aws:#ff9900;--text:#eef2ff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,sans-serif;background:radial-gradient(circle at top,#13203d,#070b14 60%);color:var(--text)}
+.container{width:92%;max-width:1400px;margin:auto}
+.hero{min-height:100vh;display:flex;align-items:center;text-align:center}
+.hero h1{font-size:4rem;font-weight:800}
+.hero h2{color:var(--aws);margin:10px 0}
+.badges span,.card{background:var(--card);backdrop-filter:blur(12px);border:1px solid var(--border)}
+.badges span{padding:10px 16px;border-radius:999px;margin:5px;display:inline-block}
+.btn{display:inline-block;margin:10px;padding:14px 26px;border-radius:12px;text-decoration:none;color:#fff;background:linear-gradient(90deg,#ff9900,#ffb84d);font-weight:700}
+section{padding:80px 0}
+.title{text-align:center;font-size:2rem;color:var(--aws);margin-bottom:35px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{padding:24px;border-radius:20px;transition:.3s}
+.card:hover{transform:translateY(-8px);box-shadow:0 0 30px rgba(255,153,0,.25)}
+.metric{font-size:2rem;font-weight:800;color:var(--aws)}
+.arch{display:grid;gap:18px;justify-content:center}
+.node{padding:16px 22px;background:#101827;border:1px solid #ff9900;border-radius:16px;text-align:center;font-weight:600}
+.arrow{text-align:center;font-size:28px;color:var(--aws)}
+footer{text-align:center;padding:40px;background:#05070d}
+.small{opacity:.8}
+</style>
+</head>
+<body>
+
+<div class="container hero">
+<div style="width:100%">
+<h1>Ayush Sharma</h1>
+<h2>Cloud Engineer</h2>
+<p>AWS 3-Tier Highly Available Web Application Architecture</p>
+<p>Production-Style Cloud Infrastructure</p><br>
+
+<div class="badges">
+<span>☁ Hosted on AWS</span>
+<span>🔒 HTTPS Enabled</span>
+<span>🚀 Live Project</span>
+</div><br><br>
+
+<a class="btn" href="https://ayushproject.online">View Live Project</a>
+<a class="btn" href="https://linkedin.com/in/ayush-sharma-7a8239214">LinkedIn</a>
+
+<div class="grid" style="margin-top:50px">
+<div class="card"><div class="metric">99.95%</div>Target Availability</div>
+<div class="card"><div class="metric">2 AZ</div>Multi-AZ Web Tier</div>
+<div class="card"><div class="metric">2/2/4</div>Auto Scaling</div>
+<div class="card"><div class="metric">24x7</div>Monitoring & Alerts</div>
+</div>
+</div>
+</div>
+
+<section>
+<div class="container">
+<h2 class="title">Live Production Architecture</h2>
+<div class="arch">
+<div class="node">🌐 Internet User</div>
+<div class="arrow">↓</div>
+<div class="node">📡 Route 53 Hosted Zone + Health Checks</div>
+<div class="arrow">↓</div>
+<div class="node">🔐 ACM SSL Certificate (HTTPS)</div>
+<div class="arrow">↓</div>
+<div class="node">⚖️ Application Load Balancer</div>
+<div class="arrow">↓</div>
+<div class="node">📈 Auto Scaling Group (Min 2 | Desired 2 | Max 4)</div>
+<div class="arrow">↓</div>
+<div class="node">🖥️ EC2 Web Server - AZ1 & AZ2</div>
+<div class="arrow">↓</div>
+<div class="node">🗄️ Amazon RDS MySQL (Private Subnet)</div>
+<div class="node">🔐 Bastion Host → Secure Administration Access</div>
+<div class="node">📊 CloudWatch → 📧 SNS Email Alerts</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2 class="title">AWS Services Used</h2>
+<div class="grid">
+<div class="card">Amazon VPC</div>
+<div class="card">Amazon EC2</div>
+<div class="card">Application Load Balancer</div>
+<div class="card">Auto Scaling Group</div>
+<div class="card">Route 53</div>
+<div class="card">ACM</div>
+<div class="card">Amazon RDS MySQL</div>
+<div class="card">CloudWatch</div>
+<div class="card">SNS</div>
+<div class="card">IAM</div>
+<div class="card">Security Groups</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2 class="title">Deployment Status</h2>
+<div class="grid">
+<div class="card">✅ VPC</div>
+<div class="card">✅ Public & Private Subnets</div>
+<div class="card">✅ Bastion Host</div>
+<div class="card">✅ Auto Scaling</div>
+<div class="card">✅ EC2 Instances</div>
+<div class="card">✅ ALB</div>
+<div class="card">✅ ACM SSL</div>
+<div class="card">✅ HTTPS</div>
+<div class="card">✅ Route 53</div>
+<div class="card">✅ Health Checks</div>
+<div class="card">✅ CloudWatch</div>
+<div class="card">✅ SNS Alerts</div>
+<div class="card">✅ RDS MySQL</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2 class="title">Project Highlights</h2>
+<div class="grid">
+<div class="card">Zero Single Point of Failure at Web Tier</div>
+<div class="card">Traffic Distribution Across Availability Zones</div>
+<div class="card">Automatic Instance Recovery</div>
+<div class="card">Custom Domain with HTTPS</div>
+<div class="card">Production-Style AWS Deployment</div>
+<div class="card">Real-Time Monitoring & Alerting</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2 class="title">Future Enhancement</h2>
+<div class="card">
+<h3>Amazon RDS Multi-AZ (Planned)</h3>
+<p>Not enabled currently. Planned as a future enhancement for budget optimization.</p>
+</div>
+</div>
+</section>
+
+<footer>
+<h2>Built by Ayush Sharma</h2>
+<p class="small">Cloud Engineer Portfolio Project • AWS 3-Tier Highly Available Architecture</p>
+</footer>
+</body>
+</html>
